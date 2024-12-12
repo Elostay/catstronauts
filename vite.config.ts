@@ -1,18 +1,19 @@
-import { defineConfig } from 'vite'
-import fs from 'fs/promises';
+import { defineConfig } from "vite";
+import fs from "fs/promises";
 
 /*
   This override allows us to use .js files instead of exclusively .jsx.
   We should remove as soon as video updates can be prioritized.
 */
 export default defineConfig(() => ({
+  base: "/catstronauts/",
   test: {
     globals: true,
-    environment: 'happy-dom',
+    environment: "happy-dom",
   },
   server: {
-    host: 'localhost',
-    port: 3000
+    host: "localhost",
+    port: 3000,
   },
   esbuild: {
     loader: "tsx",
@@ -22,7 +23,7 @@ export default defineConfig(() => ({
   optimizeDeps: {
     esbuildOptions: {
       loader: {
-        '.js': 'jsx',
+        ".js": "jsx",
       },
       plugins: [
         {

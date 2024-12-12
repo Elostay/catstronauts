@@ -7,6 +7,15 @@ import fs from "fs/promises";
 */
 export default defineConfig(() => ({
   base: "/catstronauts/",
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[hash][extname]",
+        chunkFileNames: "assets/[name].[hash].js",
+        entryFileNames: "assets/[name].[hash].js",
+      },
+    },
+  },
   test: {
     globals: true,
     environment: "happy-dom",

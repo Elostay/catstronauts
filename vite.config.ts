@@ -6,16 +6,16 @@ import fs from "fs/promises";
   We should remove as soon as video updates can be prioritized.
 */
 export default defineConfig(() => ({
-  base: "/catstronauts/",
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: "assets/[name].[hash][extname]",
-        chunkFileNames: "assets/[name].[hash].js",
-        entryFileNames: "assets/[name].[hash].js",
-      },
-    },
-  },
+  //   base: "/catstronauts/",
+  //   build: {
+  //     rollupOptions: {
+  //       output: {
+  //         assetFileNames: "assets/[name].[hash][extname]",
+  //         chunkFileNames: "assets/[name].[hash].js",
+  //         entryFileNames: "assets/[name].[hash].js",
+  //       },
+  //     },
+  //   },
   test: {
     globals: true,
     environment: "happy-dom",

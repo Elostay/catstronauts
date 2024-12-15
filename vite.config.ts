@@ -7,6 +7,9 @@ import fs from "fs/promises";
 */
 export default defineConfig(() => ({
   base: "/catstronauts/",
+  build: {
+    outDir: "dist",
+  },
   //   build: {
   //     rollupOptions: {
   //       output: {
